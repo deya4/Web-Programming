@@ -1,0 +1,82 @@
+<!--
+  Name: Deya Gonzalez
+  Date: December 7, 2023
+  Section: CSE 154 AE
+
+  Main HTML page for BinaryHub Learning, serving as the central hub for the educational platform.
+  Features include mission and vision statements, logo, and navigation buttons for easy access to
+  Home, How to Register, and Log In sections. The page includes a section highlighting BinaryHub
+  Learning's mission and vision, along with relevant images. External resources for learning are
+  provided, and the footer section is available for additional information or links.
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles.css">
+    <script src="index.js"></script>
+    <title>BinaryHub Learning</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo-and-title">
+        <a href="#">
+          <!-- This logo image is courtesy of 'Pixabay' - A website that provides a platform for
+        sharing high-quality, royalty-free images and videos -->
+          <img id="logo" src="images/logo.jpg" alt="logo">
+        </a>
+        <h1>BinaryHub<br>Learning</h1>
+      </div>
+      <div class="main-navigation">
+        <button class= "nav-button" id="home-button">Home</button>
+        <button class= "nav-button" id="instructions-button">How to Register</button>
+        <button class= "nav-button" id="log-in-button">Log In</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="mission-vision-section">
+        <div class="mission-vision-content">
+          <h2>Mission:</h2>
+          <p>
+            At BinaryHub Learning, our mission is to empower individuals with the knowledge and
+            skills needed to thrive in the digital era. We are committed to providing accessible
+            and innovative educational resources that foster a passion for learning, cultivate
+            critical thinking, and prepare students for success in the ever-evolving landscape
+            of technology.
+          </p>
+          <h2>Vision:</h2>
+          <p>
+            Our vision at BinaryHub Learning is to be a global leader in tech-focused education,
+            inspiring a diverse community of learners to reach their full potential. We envision a
+            future where individuals from all walks of life have the opportunity to excel in the
+            rapidly advancing world of computer science and technology. Through cutting-edge
+            curriculum, industry-relevant courses, and a commitment to inclusivity, we aspire to be
+            the catalyst for positive change in the lives of our students and the broader tech
+            community.
+          </p>
+          <div id="external-resources">
+            <h2>Get the Most Out of Other Online Resources:</h2>
+            <ul class="resource-list">
+              <li>
+                <a href="https://www.edx.org/learn/computer-science">edX by Harvard University</a>
+              </li>
+              <li><a href="https://www.coursera.org/">Coursera</a></li>
+              <li><a href="https://www.udacity.com/">Udacity</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="mission-vision-images">
+          <!-- Image courtesy of Alibaba Cloud (www.alibabacloud.com) -->
+          <img src="images/cutting-edge-technology.jpeg" alt="Mission and Vision Image">
+          <!-- Image courtesy of World Economic Forum (www.weforum.org/) -->
+          <img src="images/tech-community.jpeg" alt="Mission and Vision Image">
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <!-- Footer content goes here -->
+    </footer>
+  </body>
+</html>

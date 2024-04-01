@@ -1,0 +1,123 @@
+<!--
+  Name: Deya Gonzalez
+  Date: December 7, 2023
+  Section: CSE 154 AE
+  This HTML file serves as the user interface for class enrollment on the Binary Hub Learning
+  platform.
+
+  Features:
+  - Search and filter classes based on various criteria.
+  - User-friendly interface for class registration.
+  - Cart functionality for adding and managing selected classes.
+  - Confirmation message and enrollment number upon successful registration.
+
+  File Structure:
+  - The file includes HTML elements for search options, registration form, cart display,
+  and confirmation message.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Final Project</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bruno+Ace&family=Caveat&family=Dongle:wght@300&family=Inter:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="index.js"></script>
+  <script src="enrollment.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="logo-and-title">
+      <a href="#">
+        <!-- This logo image is courtesy of 'Pixabay' - A website that provides a platform for
+          sharing high-quality, royalty-free images and videos -->
+        <img id="logo" src="images/logo.jpg" alt="logo">
+      </a>
+      <h1>BinaryHub<br>Learning</h1>
+    </div>
+    <div class="main-navigation">
+      <button class="nav-button" id="home-button">Home</button>
+      <button class="nav-button" id="instructions-button">How to Register</button>
+      <button class="nav-button" id="log-in-button">Log In</button>
+    </div>
+  </header>
+  <main>
+    <div>
+      <input type="text" size="11" id="search-input" placeholder="Search...">
+      <p class="search-note">
+        e.g. Subjects (Java, Python, CSS), online, In Person, ID (INTRO 101, JAVA 201),
+      meeting days (mon, fri), meeting times (am, pm), category (CS INTRO, WEB BASICS).</p>
+      <section id="classes">
+        <div id="find-classes">
+          <label for="filter">Filter Classes by Category:</label>
+          <select id="filter" name="filters">
+            <option value="Intro-to-Computer-Science">Intro to Computer Science</option>
+            <option value="Programming-Fundamentals">Programming Fundamentals</option>
+            <option value="Web-Development-Basics">Web Development Basics</option>
+            <option value="Python-Programming">Python Programming</option>
+            <option value="JavaScript-Programming">JavaScript Programming</option>
+            <option value="Java-Programming">Java Programming</option>
+            <option value="Project-Based-Learning">Project-Based Learning</option>
+            <option value="Advanced-Topics">Advanced Topics </option>
+            <option value="All">All </option>
+          </select>
+        </div>
+      </section>
+      <div class="meeting-wrapper">
+        <div class="meeting-days" id="meeting-days">
+          <p>Meeting Days:</p>
+          <div class="day">
+            <input type="radio" id="mon" name="day" value="mon">
+            <label for="mon">Mon</label>
+          </div>
+          <div class="day">
+            <input type="radio" id="tue" name="day" value="tue">
+            <label for="tue">Tue</label>
+          </div>
+          <div class="day">
+            <input type="radio" id="wed" name="day" value="wed">
+            <label for="wed">Wed</label>
+          </div>
+          <div class="day">
+            <input type="radio" id="thu" name="day" value="thu">
+            <label for="thu">Thu</label>
+          </div>
+          <div class="day">
+            <input type="radio" id="fri" name="day" value="fri">
+            <label for="fri">Fri</label>
+          </div>
+        </div>
+        <div class="meeting-times" id="meeting-times">
+          <p>Meeting Times:</p>
+          <div class="time">
+            <input type="radio" id="am" name="time" value="am">
+            <label for="am">AM</label>
+          </div>
+          <div class="time">
+            <input type="radio" id="pm" name="time" value="pm">
+            <label for="pm">PM</label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+    <section id="search-button-section">
+      <button class="search-btn" id="search-btn">Search</button>
+      <button id="clear-filters-btn">Clear Filters</button>
+    </section>
+
+    <section id="available-classes">
+      <p>
+        <strong>By clicking this button, you can switch between the grid and list views</strong>
+      </p>
+      <button id="toggle-view-btn">Toggle View</button>
+      <div id="classes-box" class="grid">
+        <!-- Class items will be appended here -->
+      </div>
+      <div id="item-details-container"></div>
+      <!-- Class details will be appended here -->
+    </section>
+  </main>
+</body>
+</html>
